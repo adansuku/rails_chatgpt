@@ -1182,3 +1182,20 @@ Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:54 +0100
   
 ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
   
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:14:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:14:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:14:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:14:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
