@@ -1,0 +1,1184 @@
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:52:36 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:52:42 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-08-06 19:52:43 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:52:48 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:52:54 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:00 +0100
+  
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-08-06 19:53:04 +0100
+  
+ActiveRecord::NoDatabaseError (We could not find your database: my_gpt_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-08-06 19:53:05 +0100
+  
+ActiveRecord::NoDatabaseError (We could not find your database: my_gpt_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:06 +0100
+  
+ActiveRecord::NoDatabaseError (We could not find your database: my_gpt_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (115.5ms)[0m  [1m[35mCREATE DATABASE "my_gpt_development" ENCODING = 'unicode'[0m
+  [1m[35m (47.3ms)[0m  [1m[35mCREATE DATABASE "my_gpt_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5388626663453737095)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-06 18:53:17.144486', '2024-08-06 18:53:17.144489') RETURNING "key"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5388626663453737095)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/" for ::1 at 2024-08-06 19:53:30 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 0.5ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1313)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3718)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `openai_path' for an instance of #<Class:0x000000012155afb0>):
+    1: <div class="row">
+    2:   <%= form_with url: openai_path, method: :get do |form| %>
+    3:     <div class="form-group">
+    4:       <%= form.label :query %>
+    5:       <%= form.text_area :query %>
+  
+app/views/openai/index.erb:2
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:53:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/" for ::1 at 2024-08-06 19:54:34 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 0.6ms | Allocations: 1315)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1407)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2306)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"openai"}, missing required keys: [:id]):
+    1: <div class="row">
+    2:   <%= form_with url: openai_path, method: :get do |form| %>
+    3:     <div class="form-group">
+    4:       <%= form.label :query %>
+    5:       <%= form.text_area :query %>
+  
+app/views/openai/index.erb:2
+Started GET "/" for ::1 at 2024-08-06 19:54:34 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 1.0ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1154)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1382)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"openai"}, missing required keys: [:id]):
+    1: <div class="row">
+    2:   <%= form_with url: openai_path, method: :get do |form| %>
+    3:     <div class="form-group">
+    4:       <%= form.label :query %>
+    5:       <%= form.text_area :query %>
+  
+app/views/openai/index.erb:2
+Started GET "/" for ::1 at 2024-08-06 19:54:35 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 0.4ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1157)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1385)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"openai"}, missing required keys: [:id]):
+    1: <div class="row">
+    2:   <%= form_with url: openai_path, method: :get do |form| %>
+    3:     <div class="form-group">
+    4:       <%= form.label :query %>
+    5:       <%= form.text_area :query %>
+  
+app/views/openai/index.erb:2
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:54:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/" for ::1 at 2024-08-06 19:55:29 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 3.7ms | Allocations: 2236)
+  Rendered layout layouts/application.html.erb (Duration: 150.9ms | Allocations: 146850)
+Completed 200 OK in 153ms (Views: 152.2ms | ActiveRecord: 0.0ms | Allocations: 147803)
+
+
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/openai?query=hello%0A&commit=get+content" for ::1 at 2024-08-06 19:55:33 +0100
+Processing by OpenaiController#index as HTML
+  Parameters: {"query"=>"hello\n", "commit"=>"get content"}
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 0.0ms | Allocations: 2164)
+
+
+  
+RuntimeError (You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.):
+  
+app/services/openai_service.rb:22:in `call'
+app/controllers/openai_controller.rb:5:in `index'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:55:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/" for ::1 at 2024-08-06 19:56:10 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 0.7ms | Allocations: 1329)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 24559)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 25472)
+
+
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/openai?query=hello&commit=get+content" for ::1 at 2024-08-06 19:56:14 +0100
+Processing by OpenaiController#index as HTML
+  Parameters: {"query"=>"hello", "commit"=>"get content"}
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 0.0ms | Allocations: 1567)
+
+
+  
+RuntimeError (You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.):
+  
+app/services/openai_service.rb:22:in `call'
+app/controllers/openai_controller.rb:5:in `index'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/" for ::1 at 2024-08-06 19:56:52 +0100
+Processing by OpenaiController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering openai/index.erb within layouts/application
+  Rendered openai/index.erb within layouts/application (Duration: 0.9ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 24518)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 25428)
+
+
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:56:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/openai?query=hello&commit=get+content" for ::1 at 2024-08-06 19:56:55 +0100
+Processing by OpenaiController#index as HTML
+  Parameters: {"query"=>"hello", "commit"=>"get content"}
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+  
+RuntimeError (You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.):
+  
+app/services/openai_service.rb:22:in `call'
+app/controllers/openai_controller.rb:5:in `index'
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:57:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:58:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 19:59:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
+Started GET "/sidekiq/cron" for ::1 at 2024-08-06 20:00:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/cron"):
+  
